@@ -1,0 +1,59 @@
+
+<div class="content">
+	<div class="sidebar">
+        <div class="entry" style="padding:0 20px;">
+            <h2>Let’s talk!</h2>
+            <div class="box">
+            	<p>Feel free to share and let us know what you think of the free trial. We’d love your feedback.</p>
+				 <p>We'd love to hear what you think.</p>
+            </div>
+        </div><!-- .entry -->
+        <div class="free-trial-box boxgrey round-15">
+     	   <div class="entry">
+                <h1>FREE TRIAL</h1>
+                <p>You can sign up for a Free Trial <br />
+				(no credit card required) and take your time to evaluate the system.</p>
+                <p>Free trial plan allows for two topics or keywords searches.</p>
+                <a class="sign-up" href="https://www.smacapp.com/index.php?req=iFa-615kpUoth9Dg1ps_84JrF9ncCpN_">Sign Up &raquo;</a>
+            </div><!-- .entry -->
+        </div><!-- .free-trial-box -->
+    </div><!-- .sidebar -->
+	<div class="entry-content">
+        <div class="white-box round-15" id="formContact">
+			<?php if($_GET['err'] == 2){ ?>
+			<div style="color:#ff0000;"><strong>Send message failed, please try again!</strong></div>
+			<?php } ?>
+			
+			<?php if($_GET['err'] == 1){ ?>
+			<div style="padding:150px 100px;font-weight:bold;font-size:18px;text-align:center;">Thank you we will revert to you soon.</div>
+			<?php }else{ ?>
+            <form id="contact" class="contact-form form" action="sendmail.php" method="post">
+            	<div class="row">
+                	<label>Your Name</label>
+                    <input type="text"  name="name" class="required"/>
+                </div>
+            	<div class="row">
+                	<label>Email</label>
+                    <input type="text" name="email" class="required email" />
+                </div>
+            	<div class="row">
+                	<label>Phone</label>
+                    <input type="text" name="phone" class="number" />
+                </div>
+            	<div class="row">
+                	<label>Country</label>
+                    <input type="text" name="country" />
+                </div>
+            	<div class="row">
+                	<label>Message</label>
+                    <textarea name="message"></textarea>
+                </div>
+                <div class="err-message">
+                </div>
+                <input type="submit" value="Send &raquo;" class="green-btn" />
+            </form>
+			<?php } ?>
+        </div><!-- .white-box -->
+    </div><!-- .entry-content -->
+</div><!-- .content -->
+<div class="kabel kabelcontact"></div>
